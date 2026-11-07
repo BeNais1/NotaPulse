@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NotaPulse — радіо й оповіщення для магазинів</title>
+<meta name="description" content="NotaPulse: фонове радіо, повітряні тривоги, хвилина мовчання й оголошення для магазинів по всій Україні.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='116' fill='%23101418'/%3E%3Cpath d='M256 76L98 124V252Q98 390 256 456Z' fill='%23FF8A4A'/%3E%3Cpath d='M256 76L414 124V252Q414 390 256 456Z' fill='%23FF6B4A'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0D1116;
+    --surface: #141A21;
+    --line: #242E39;
+    --text: #EEF2F6;
+    --muted: #8B98A6;
+    --accent: #FF6B4A;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 20px 48px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .brand svg {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 18px;
+  }
+  .about {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  h2 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .about p {
+    margin: 0 0 16px;
+    font-size: 18px;
+  }
+  ul {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+  }
+  li {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+  }
+  li b { display: block; }
+  li span { color: var(--muted); font-size: 15px; }
+  footer {
+    padding: 24px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  @media (max-width: 520px) {
+    main { padding-top: 48px; }
+    .brand { gap: 14px; }
+    .brand svg { width: 64px; height: 64px; }
+    h1 { font-size: 34px; }
+    .tagline { font-size: 16px; }
+    .about { margin-top: 40px; }
+    .about p { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <svg viewBox="0 0 512 512" role="img" aria-label="Логотип NotaPulse">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#FFA04A"/>
+          <stop offset="0.5" stop-color="#FF6B4A"/>
+          <stop offset="1" stop-color="#C9302A"/>
+        </linearGradient>
+      </defs>
+      <rect width="512" height="512" rx="116" fill="#101418"/>
+      <g transform="translate(256 262) translate(-256 -260)">
+        <path d="M256 70L98 118V246Q98 384 256 450Z" fill="url(#g)"/>
+        <path d="M256 70L98 118V246Q98 384 256 450Z" fill="#fff" opacity="0.16"/>
+        <path d="M256 70L414 118V246Q414 384 256 450Z" fill="url(#g)"/>
+      </g>
+      <g transform="translate(256 262) scale(0.56) translate(-270 -262)">
+        <path d="M272 104H300V372H272Z" fill="#FFF3EE"/>
+        <path d="M300 104L400 174L300 196Z" fill="#FFFFFF"/>
+        <path d="M300 196L400 174L300 250Z" fill="#FFE6DC"/>
+        <path d="M140 372L210 318L300 372Z" fill="#FFFFFF"/>
+        <path d="M140 372L300 372L230 420Z" fill="#FFD2C2"/>
+      </g>
+    </svg>
+    <div>
+      <h1>NotaPulse</h1>
+      <p class="tagline">Радіо й оповіщення для магазинів</p>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Про нас</h2>
+    <p>NotaPulse — українська програма, яка поєднує в магазині фонову музику й важливі оповіщення. Встановлюється на звичайний комп’ютер у торговій залі й працює сама, без участі персоналу.</p>
+    <p>Мережа магазинів керує всіма точками з одного місця: гучністю, розкладом, оголошеннями й музикою.</p>
+    <ul>
+      <li><b>Фонове радіо</b><span>Музика в робочий час, гучність і розклад задаються для кожної точки.</span></li>
+      <li><b>Повітряні тривоги</b><span>Автоматичне оповіщення про тривогу й відбій для вашої громади.</span></li>
+      <li><b>Хвилина мовчання</b><span>Щодня о 9:00 — без нагадувань і ручного вмикання.</span></li>
+      <li><b>Оголошення</b><span>Акції та службові повідомлення за розкладом у всіх магазинах мережі.</span></li>
+    </ul>
+  </section>
+</main>
+<footer>© 2026 NotaPulse</footer>
+</body>
+</html>
